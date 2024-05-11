@@ -18,14 +18,6 @@ public class KingManager : MonoBehaviour
 
     void Update()
     {
-        if (gm.isPlaying == true)
-        {
-            on = true;
-        }
-
-        if (gm.isPlaying == false)
-        {
-            on = false;
-        }
+        on = gm.isPlaying;
     }
 }
