@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerManager : MonoBehaviour
 {
 
-    public Vector3 currentMousePosition;
-
 
     void Start()
     {
@@ -16,9 +14,6 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
-        {
-            currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        }
+
     }
 }
