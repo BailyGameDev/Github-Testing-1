@@ -4,15 +4,21 @@ using UnityEngine;
 
 public class PlayerManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+
+    public Vector3 currentMousePosition;
+
+
     void Start()
     {
         
     }
 
-    // Update is called once per frame
+
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(1))
+        {
+            currentMousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        }
     }
 }
