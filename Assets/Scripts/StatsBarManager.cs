@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Unity.VisualScripting;
 
 public class StatsBarManager : MonoBehaviour
 {
@@ -22,26 +23,35 @@ public class StatsBarManager : MonoBehaviour
 
         currentValue = maxValue;
 
-        fillImage = transform.Find("Fill").transform.gameObject.GetComponent<Image>();
-        text = transform.Find("Text").GetComponent<TMP_Text>();
+        for(int i = 0; i < transform.childCount; i++)
+        {
+            if(transform.GetChild(i).name == "Fill")
+            {
+                fillImage = transform.GetChild(i).GetComponent<Image>();
+            }
+            else if(transform.GetChild(i).name == "Text")
+            {
+                text = transform.GetChild(i).GetComponent<TMP_Text>();
+            }
+        }
     }
 
     public void UpdateHealthValue()
     {
-        // Updates the fill amount on the bar and updates the text
-        fillImage.fillAmount = currentValue / maxValue;
-
-        text.text = currentValue.ToString() + "/" + maxValue.ToString();
-
         // Caps the values
-        if(currentValue >= maxValue)
+        if (currentValue > maxValue)
         {
             currentValue = maxValue;
         }
-        else if(currentValue <= 0)
+        else if (currentValue < 0)
         {
             currentValue = 0;
         }
+
+        // Updates the fill amount on the bar and updates the text
+        fillImage.fillAmount = (float)currentValue / (float)maxValue;
+
+        text.text = currentValue.ToString() + "/" + maxValue.ToString();
     }
 
     private void Update()
