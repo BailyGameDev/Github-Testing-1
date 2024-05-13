@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1380121105723638931}
   - component: {fileID: 8159028473701693681}
   - component: {fileID: 3828831854004071842}
+  - component: {fileID: 1540742653249399600}
   m_Layer: 0
   m_Name: Square Troup
   m_TagString: Untagged
@@ -158,3 +159,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1540742653249399600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1667939476047974028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ea07461032140e192924010028dda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7920354664319511457}
   - component: {fileID: 6506309744488580944}
   - component: {fileID: 2680321302966738786}
+  - component: {fileID: -9107564739239984162}
   m_Layer: 0
   m_Name: Triangle Troup
   m_TagString: Untagged
@@ -161,3 +162,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 0
+--- !u!114 &-9107564739239984162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5918263271067345677}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 25ea07461032140e192924010028dda4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
